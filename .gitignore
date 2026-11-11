@@ -9,3 +9,5 @@ data/
 xmldata/
 *.xlsx
 *.csv
+
+__pycache__/
