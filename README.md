@@ -9,6 +9,19 @@ Build a **longitudinal dataset of state and jurisdiction eviction laws**. Today,
 3. **Linking.** Each workbook citation is matched to the corresponding section in the XML for every earlier and later year. Citations can be renumbered or renamed over time, so the matching process uses the **citation name/number** and also the **text of the law**.
 4. **Output.** For each jurisdiction × question × year: the controlling section, and from that a view of how the law changed over time.
 
+## Setup
+Requires Python 3.9 or newer. From the repo folder:
+
+```bash
+python3 -m venv .venv                      # create a virtual environment (once)
+source .venv/bin/activate                  # activate it (each new terminal)
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
+python3 match_statutes.py --self-test      # should print "Self-test passed."
+```
+
+Then run the matcher with `./run_match_statutes.sh`.
+
 ## Current state (Oct 2026)
 - **Workbook:** 306 rows = 51 jurisdictions (50 states + DC) × 6 high-priority questions:
   - Is there a law?
